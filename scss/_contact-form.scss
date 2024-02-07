@@ -1,0 +1,50 @@
+.contact-form {
+    padding-top: 150px;
+    .contact-form-title {
+        font-size: 20px;
+    }
+
+    form {
+        padding: 20px 0;
+        margin: 0;
+        overflow: hidden;
+
+        input {
+
+            padding: 10px 20px;
+            margin: 0 10px 10px 0;
+            border: 3px solid $grey;
+            border-radius: 50px;
+            outline: none;
+            background: $black;
+            font-family: $main-font;
+            color: $white;
+            font-size: 20px;
+
+            // max-width: 40vw;
+            &::placeholder {
+                color: $white;
+            }
+            &:focus::placeholder {
+                opacity: 0.5;
+            }
+
+        }
+        .hidden-field {
+            position: absolute;
+            top: 0;
+            left: -5000px;
+        }
+
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .contact-form {
+        padding-top: 90px;
+        form input {
+            border: 3px solid $white;
+        }
+    }
+}

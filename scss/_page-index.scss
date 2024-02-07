@@ -1,0 +1,111 @@
+
+.page-index {
+    position: relative;
+    background: $black;
+    min-height: 100%;
+    width: 100%;
+    padding: min(8vw, 100px) 10vw;
+    overflow: hidden;
+    .container {
+        position: relative;
+        max-width: 1400px;
+        margin: auto;
+        z-index: 2;
+    }
+    .page-index-title {
+        font-size: 40px;
+        font-weight: 600;
+        padding-top: 78px;
+        color: $blue;
+        text-transform: uppercase;
+    }
+    .x-link {
+        position: relative;
+        display: inline-block;
+        margin-top: 40px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background: $black;
+    }
+    .page-index-waves {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .page-index-sphere {
+        position: absolute;
+        bottom: -150px;
+        right: -90px;
+        img {
+            width: 500px;
+        }
+    }
+    .page-index-orbit-1 {
+        position: absolute;
+        top: 36vh;
+        left: 36vw;
+        img {
+            width: 60vw;
+        }
+        animation: rotate360 30s infinite linear reverse;
+    }
+    .page-index-orbit-2 {
+        position: absolute;
+        top: 30vh;
+        left: 30vw;
+        img {
+            width: 70vw;
+        }
+        animation: rotate360 40s infinite linear reverse;
+    }
+    .page-index-orbit-3 {
+        position: absolute;
+        top: 20px;
+        left: 130px;
+        img {
+            width: 100vw;
+        }
+        animation: rotate360 60s infinite linear reverse;
+    }
+    @keyframes rotate360 {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    .page-index-logo {
+        max-width: 60vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .page-index {
+        .page-index-orbit-1 {
+            left: 60px;
+            top: 330px;
+            img {
+                width: 550px;
+            }
+        }
+        .page-index-orbit-2 {
+            left: 50px;
+            top: 350px;
+            img {
+                width: 500px;
+            }
+        }
+        .page-index-orbit-3 {
+            left: 30px;
+            top: 30px;
+            img {
+                width: 1000px;
+            }
+        }
+        .x-link {
+            margin-top: 0;
+        }
+    }
+    
+}
